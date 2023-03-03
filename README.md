@@ -10,7 +10,7 @@ March 2nd is 9th week of the first quarter so we get `9♥` returned from the pl
 9♥ <username> ~/dev/card-calendar-prompt $ _
 ```
 
-Quarters of the year are represented as follows
+Quarters of the year are represented as follows, the symbols may change slightly depending on the font you use.
 
 | Month         | Q#  | Symbol | Weeks |
 | ------------- | --- | ------ | ----- |
@@ -44,7 +44,7 @@ Unix `date` command must be available in your shell, and your machine must be ab
 
 ## Bash Setup
 
-Add the following lines to the end of your `~/.bashrc` file. (feel free to customize the PS1 prompt to your liking)
+Add the following lines to the end of your `~/.bashrc` file. (feel free to customize the PS1 string to your liking)
 
 ```sh
 # Card Calendar plugin
@@ -54,6 +54,17 @@ PS1="$CALENDAR_CARD $PS1"
 ```
 
 The source line should be the path to where you saved the plugin, and the PS1 line is just an example of prepending the card to the prompt.
+
+## ZSH Setup
+
+Add the following lines to the end of your `~/.zshrc` file. (feel free to customize the PROMPT string to your liking)
+
+```
+# Card Calendar plugin
+source ~/dev/card-calendar-prompt/prompt.sh
+CALENDAR_CARD=$(get_calendar_card)
+PROMPT="$CALENDAR_CARD $PROMPT"
+```
 
 ## Supported Shells
 
