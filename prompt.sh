@@ -1,29 +1,52 @@
 #!/bin/bash
 
-offset=0
+QUARTER2=14
+QUARTER3=27
+QUARTER4=40
+QUARTER5=53
+WEEKS_PER_QUARTER=13
+
+WEEK_OFFSET=0
 
 # The hyphen "-" after % make date NOT pad with zeros
-raw_week_number=$(date '+%-V')
-effective_number=$(( $raw_week_number + $offset))
-
-echo $effective_number
+RAW_WEEK=$(date '+%-V')
+WEEK_NUMBER=$(( $RAW_WEEK + $WEEK_OFFSET))
 
 # Determine suit
 suit="Joker"
-if [ $effective_number -lt 14 ]
+if [ $WEEK_NUMBER -lt $QUARTER2 ]
 then
   suit="Heart"
-elif [ $effective_number -lt 27 ]
+elif [ $WEEK_NUMBER -lt $QUARTER3 ]
 then
   suit="Club"
-elif [ $effective_number -lt 40 ]
+elif [ $WEEK_NUMBER -lt $QUARTER4 ]
 then
   suit="Diamond"
-elif [ $effective_number -lt 53 ]
+elif [ $WEEK_NUMBER -lt $QUARTER5 ]
 then
   suit="Spade"
 else
   suit="Joker"
 fi
 
-echo $suit
+# Determine Card
+card=$(($WEEK_NUMBER % $WEEKS_PER_QUARTER))
+
+case $card in
+  1)
+    card="A"
+    ;;
+  11)
+    card="J"
+    ;;
+  12)
+    card="Q"
+    ;;
+  # 13 Modulo 13 is 0
+  0)
+    card="K"
+    ;;
+esac
+
+echo "Suit $suit, Card $card"
