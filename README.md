@@ -12,13 +12,13 @@ March 2nd is 9th week of the first quarter so we get `9♥` returned from the pl
 
 Quarters of the year are represented as follows
 
-| Month         | Q#  | Symbol  | Weeks |
-| ------------- | --- | ------- | ----- |
-| Jan, Feb, Mar | Q1  | Heart   | 1-13  |
-| Apr, May, Jun | Q2  | Club    | 14-26 |
-| Jul, Aug, Sep | Q3  | Diamond | 27-39 |
-| Oct, Nov, Dec | Q4  | Spade   | 40-52 |
-| Final days    | Q4  | Joker   | 53    |
+| Month         | Q#  | Symbol | Weeks |
+| ------------- | --- | ------ | ----- |
+| Jan, Feb, Mar | Q1  | ♥      | 1-13  |
+| Apr, May, Jun | Q2  | ♣      | 14-26 |
+| Jul, Aug, Sep | Q3  | ♦      | 27-39 |
+| Oct, Nov, Dec | Q4  | ♠      | 40-52 |
+| Final days    | Q4  | 🂿      | 53    |
 
 Cards numbers are represented in order, with "Ace" being the low instead of the high.
 
