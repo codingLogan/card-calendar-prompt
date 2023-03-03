@@ -16,18 +16,18 @@ WEEK_NUMBER=$(( $RAW_WEEK + $WEEK_OFFSET))
 suit="Joker"
 if [ $WEEK_NUMBER -lt $QUARTER2 ]
 then
-  suit="Heart"
+  suit="♥"
 elif [ $WEEK_NUMBER -lt $QUARTER3 ]
 then
-  suit="Club"
+  suit="♣"
 elif [ $WEEK_NUMBER -lt $QUARTER4 ]
 then
-  suit="Diamond"
+  suit="♦"
 elif [ $WEEK_NUMBER -lt $QUARTER5 ]
 then
-  suit="Spade"
+  suit="♠"
 else
-  suit="Joker"
+  suit="🂿"
 fi
 
 # Determine Card
@@ -49,4 +49,4 @@ case $card in
     ;;
 esac
 
-echo "Suit $suit, Card $card"
+# echo "$card$suit"
