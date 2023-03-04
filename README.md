@@ -18,7 +18,7 @@ Quarters of the year are represented as follows
 | Apr, May, Jun | Q2  | ♣      | 14-26 |
 | Jul, Aug, Sep | Q3  | ♦      | 27-39 |
 | Oct, Nov, Dec | Q4  | ♠      | 40-52 |
-| Final days    | Q4  | 🂿      | 53    |
+| Final days    | Q4  | ♛      | 53    |
 
 Cards numbers are represented in order, with "Ace" being the low instead of the high.
 

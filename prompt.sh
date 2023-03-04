@@ -19,7 +19,7 @@ function get_calendar_card()
   WEEK_NUMBER=$(( $RAW_WEEK + $WEEK_OFFSET))
 
   # Determine suit
-  suit="Joker"
+  suit="♛"
   if [ $WEEK_NUMBER -lt $QUARTER2 ]
   then
     suit="♥"
@@ -33,7 +33,7 @@ function get_calendar_card()
   then
     suit="♠"
   else
-    suit="🂿"
+    suit="♛"
   fi
 
   # Determine Card
