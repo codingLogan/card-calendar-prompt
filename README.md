@@ -61,8 +61,7 @@ Add the following lines to the end of your `~/.bashrc` file. (feel free to custo
 ```sh
 # Card Calendar plugin
 source ~/dev/card-calendar-prompt/prompt.sh
-CALENDAR_CARD=$(get_calendar_card)
-PS1="$CALENDAR_CARD $PS1"
+PS1="\$(get_calendar_card) $PS1"
 ```
 
 The source line should be the path to where you saved the plugin, and the PS1 line is just an example of prepending the card to the prompt.
@@ -74,8 +73,7 @@ Add the following lines to the end of your `~/.zshrc` file. (feel free to custom
 ```
 # Card Calendar plugin
 source ~/dev/card-calendar-prompt/prompt.sh
-CALENDAR_CARD=$(get_calendar_card)
-PROMPT="$CALENDAR_CARD $PROMPT"
+PROMPT="\$(get_calendar_card) $PROMPT"
 ```
 
 ## Supported Shells
